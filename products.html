@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - FlipShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <h1>FlipShop</h1>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="products-hero">
+        <div class="container">
+            <h1>Our Products</h1>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter">
+                    <h3>Categories</h3>
+                    <ul id="categoryFilter">
+                        <li data-category="all" class="active">All Products</li>
+                        <li data-category="electronics">Electronics</li>
+                        <li data-category="fashion">Fashion</li>
+                        <li data-category="home">Home & Living</li>
+                        <li data-category="sports">Sports</li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h3>Price</h3>
+                    <div class="price-filter">
+                        <input type="range" id="priceRange" min="0" max="1000" value="1000">
+                        <div class="price-value">
+                            <span>0</span>
+                            <span id="priceValue">100000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter">
+                    <h3>Rating</h3>
+                    <div class="rating-filter">
+                        <div class="rating">
+                            <input type="checkbox" id="5-star">
+                            <label for="5-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                        </div>
+                        <div class="rating">
+                            <input type="checkbox" id="4-star">
+                            <label for="4-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                        </div>
+                        <div class="rating">
+                            <input type="checkbox" id="3-star">
+                            <label for="3-star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-container">
+                <div class="sort-container">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="default">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be loaded dynamically with JavaScript -->
+                </div>
+                <div class="pagination">
+                    <button id="prevPage" disabled><i class="fas fa-chevron-left"></i></button>
+                    <div id="pageNumbers" class="page-numbers">
+                        <span class="active">1</span>
+                    </div>
+                    <button id="nextPage"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FlipShop</h3>
+                    <p>Your one-stop shop for all your needs.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Gurugram, Delhi-NCR, India</p>
+                    <p><i class="fas fa-phone"></i> +91 9616897163</p>
+                    <p><i class="fas fa-envelope"></i> info@shopeasy.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FlipShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html> 
